@@ -112,7 +112,7 @@ static void __exit timer_exit(void)
 	atomic_set(&tact, -1);
 	ret = del_timer(&sos_timer);
 	kobject_put(kobj);
-	printk(KERN_INFO MODULE_PREFIX "Timer module uninstalled.\n");
+	printk(KERN_INFO MODULE_PREFIX "Timer module has been uninstalled.\n");
 }
 
 module_init(timer_init); /* Register module entry point */
