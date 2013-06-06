@@ -9,7 +9,7 @@
 #define DEFAULT_TICK 1000
 #define MIN_TIMER 500
 #define FILE_ATTRIBUTES 0666
-
+//
 typedef struct timer_list TIMER_LIST;
 typedef struct kobject KOBJECT, *PKOBJECT;
 typedef struct kobj_attribute KOBJ_ATTRIBUTE, *PKOBJ_ATTRIBUTE;
