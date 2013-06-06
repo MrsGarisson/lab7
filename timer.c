@@ -84,7 +84,7 @@ static ssize_t file_store(PKOBJECT kobj, PKOBJ_ATTRIBUTE attr, const char *buf, 
 static int __init timer_init(void)
 {
 	int ret, start = atomic_read(&tact);
-	printk(KERN_INFO MODULE_PREFIX "Timer module installed.\n");
+	printk(KERN_INFO MODULE_PREFIX "Timer module was installed.\n");
 	printk(KERN_INFO MODULE_PREFIX "Timer period can be set and seen in \"/sys/kernel/sostimer/period\"");
 	setup_timer(&sos_timer, sos_timer_callback, 0);
 	printk(KERN_INFO MODULE_PREFIX "Starting timer with %d ms period\n", start);
@@ -93,6 +93,7 @@ static int __init timer_init(void)
 		printk(KERN_INFO MODULE_PREFIX "Error when setting up timer.\n");
 	}
 
+//kernel object
 	kobj = kobject_create_and_add("sostimer", kernel_kobj);
 	if (!kobj) {
 		return -ENOMEM;
