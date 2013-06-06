@@ -42,7 +42,7 @@ static PATTRIBUTE attrs[] = {
 };
 
 /* Attributes group. */
-static ATTRIBUTE_GROUP attr_group = {
+static ATTRIBUTE_GROUP attr_group = {//Alex
 	.attrs = attrs,
 };
 
